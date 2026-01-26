@@ -5,8 +5,10 @@ import Textbox from './Textbox';
 
 const Login = function(){
     return(
-        <>   
-        <h1>Login</h1>
+        <div className="logincontainercontainer">
+
+        <div className="logincontainer">   
+        <h1 className="loginheading">Login</h1>
         
         <Textbox place="Email ID" />
         
@@ -19,7 +21,10 @@ const Login = function(){
         
         <p className="signup">Don't have an account? Sign Up</p>
 
-        </>
+        </div>
+
+
+        </div>
     )
 };
 
