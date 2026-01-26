@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 420px;
+  margin-bottom: 18px;
+}
+
+.textbox {
+  width: 100%;
+  padding: 16px 44px 16px 14px; 
+  font-size: 18px;
+
+  border: 1.5px solid black;
+  box-sizing: border-box;
+
+}
+
+.textbox::placeholder {
+  color: #565353;
+  font-size: 18px;
+}
+
+.eye {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  opacity: 0.6;
+  user-select: none;
+}
+
+.eye:hover {
+  opacity: 1;
+}
+
+
+.fp{
+    font-size: smaller;
+    color: rgb(107, 107, 243);
+    transform: translateX(308px);
+    cursor: pointer;
+}
+
+.fp:hover{
+  text-decoration: underline;
+}
+
+.loginbutton {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.loginbutton:hover {
+  background-color: #1e40af; 
+}
+
+.signup{
+  
+    font-size: smaller;
+    color: rgb(107, 107, 243);
+    cursor: pointer;
+}
+
+.signup:hover{
+  text-decoration: underline;
+}
+
+.Container{
+  display:flex;
+  gap: 80px;
+}
+
+.roomimg{
+  width: 900px;
+  height: 400px;
+}
