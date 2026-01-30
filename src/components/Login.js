@@ -17,7 +17,13 @@ const Login = function(){
         
         <p className="fp">Forgot Password?</p>
         
-        <button className="loginbutton">Log In</button>
+        <button className="loginbutton" onClick={async ()=>{
+            const a = await fetch("http://127.0.0.1/8000/csrf_cookie/");
+            console.log(a);
+
+
+
+        }}>Log In</button>
         
         <p className="signup">Don't have an account? Sign Up</p>
 
