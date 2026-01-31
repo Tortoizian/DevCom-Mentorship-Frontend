@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import Textbox from './Textbox';
+// import getCookie from './csrfcookie';
 
+// const csrf = getCookie('csrftoken')
 
 const Login = function(){
     return(
@@ -18,8 +20,14 @@ const Login = function(){
         <p className="fp">Forgot Password?</p>
         
         <button className="loginbutton" onClick={async ()=>{
-            const a = await fetch("http://127.0.0.1/8000/csrf_cookie/");
-            console.log(a);
+            const response = await fetch("http://127.0.0.1:8000/login/",{
+                method: 'POST',
+                headers:{'Content-Type': 'application/json'},
+                body: JSON.stringify({"rollno":'25b001',"password":"abc"})
+                            
+            });
+            console.log(response)
+            
 
 
 
