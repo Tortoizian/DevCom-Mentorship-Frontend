@@ -20,7 +20,7 @@ function App(){
 
   }
 
-    if(webpage==1){return (<Login/>);}
+    if(webpage==1){return (<Login SetWebpage={SetWebpage}/>);}
     if(webpage==2) {return (<BookingSummary/>); }
 }
 export default App;

@@ -29,7 +29,7 @@ const Textbox = function (props) {
         <>
             <div className="input-wrapper">
 
-            <input type={type} placeholder={props.place} className="textbox" />
+            <input type={type} placeholder={props.place} className="textbox" value={props.value} onChange={props.onChange} />
 
             {eye}
 

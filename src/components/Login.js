@@ -5,28 +5,35 @@ import Textbox from './Textbox';
 
 // const csrf = getCookie('csrftoken')
 
-const Login = function(){
+const Login = function(props){
+    const [rollNo, setRollNo] = useState("");
+    const [password, setPassword] = useState("");
     return(
         <div className="logincontainercontainer">
 
         <div className="logincontainer">   
         <h1 className="loginheading">Login</h1>
         
-        <Textbox place="Email ID" />
+        <Textbox place="Roll No." id="inputemail" value={rollNo} onChange={(e)=>setRollNo(e.target.value)}/>
         
-        <Textbox place="Password" eye={true}/>
+        <Textbox place="Password" eye={true} value={password} onChange={(e)=>setPassword(e.target.value)}/>
         
         
         <p className="fp">Forgot Password?</p>
         
         <button className="loginbutton" onClick={async ()=>{
+            console.log(rollNo);
+            console.log(password);
             const response = await fetch("http://127.0.0.1:8000/login/",{
                 method: 'POST',
                 headers:{'Content-Type': 'application/json'},
-                body: JSON.stringify({"rollno":'25b001',"password":"abc"})
+                body: JSON.stringify({"rollno":rollNo,"password":password})
                             
             });
-            console.log(response)
+            const data = await response.json();
+            console.log(data);
+            if(data["success"]) props.SetWebpage(2);
+            else alert("Incorrect Details");
             
 
 
@@ -43,3 +50,12 @@ const Login = function(){
 };
 
 export default Login;
+
+// //{
+//   "rollno": "23CS101",
+//   "password": "mypassword123",
+//   "re_password": "mypassword123",
+// "student_dept":"aero",
+// "email":"random@gmail.com",
+// "student_name":"divesh"
+// }
