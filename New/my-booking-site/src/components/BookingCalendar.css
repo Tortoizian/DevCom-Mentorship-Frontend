@@ -1,0 +1,26 @@
+.calendar-container {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 250px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.day-name { font-weight: bold; color: #777; margin-bottom: 5px; }
+
+.date-cell {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.date-cell:hover { background: #f0f0f0; }
+.date-cell.selected { background: #0084ff; color: white; }

@@ -1,0 +1,56 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-header {
+  background: #0084ff;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.qr-card {
+  border: 1px solid #ddd;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.qr-placeholder img { width: 120px; height: 120px; }
+
+.booking-details {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+}
+
+.btn-blue { background: #0084ff; color: white; border: none; padding: 10px 15px; border-radius: 20px; cursor: pointer; }
+.btn-grey { background: #e0e0e0; color: #333; border: none; padding: 10px 15px; border-radius: 20px; cursor: pointer; }
+.back-link { background: none; border: none; color: #0084ff; margin: 15px; cursor: pointer; text-decoration: underline; }
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
