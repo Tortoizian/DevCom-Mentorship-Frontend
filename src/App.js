@@ -8,7 +8,7 @@ function App(){
   const [webpage, SetWebpage] = useState(0);
 
 
-  if(webpage==0){
+  if(webpage===0){
     return(
       <>
       
@@ -20,7 +20,7 @@ function App(){
 
   }
 
-    if(webpage==1){return (<Login SetWebpage={SetWebpage}/>);}
-    if(webpage==2) {return (<BookingSummary/>); }
+    if(webpage===1){return (<Login SetWebpage={SetWebpage}/>);}
+    if(webpage===2) {return (<BookingSummary/>); }
 }
 export default App;

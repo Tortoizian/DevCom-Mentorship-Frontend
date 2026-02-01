@@ -24,16 +24,21 @@ const Login = function(props){
         <button className="loginbutton" onClick={async ()=>{
             console.log(rollNo);
             console.log(password);
-            const response = await fetch("http://127.0.0.1:8000/login/",{
-                method: 'POST',
-                headers:{'Content-Type': 'application/json'},
-                body: JSON.stringify({"rollno":rollNo,"password":password})
-                            
-            });
-            const data = await response.json();
-            console.log(data);
-            if(data["success"]) props.SetWebpage(2);
-            else alert("Incorrect Details");
+			try{
+				const response = await fetch("http://127.0.0.1:8000/login/",{
+					method: 'POST',
+					headers:{'Content-Type': 'application/json'},
+					body: JSON.stringify({"rollno":rollNo,"password":password})
+								
+				});
+				const data = await response.json();
+				console.log(data);
+				if(data["success"]) props.SetWebpage(2);
+				else alert("Incorrect Details");
+			}catch{
+				alert("Could not fetch details, Please try again...");
+			}
+		
             
 
 
